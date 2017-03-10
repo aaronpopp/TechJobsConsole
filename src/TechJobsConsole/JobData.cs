@@ -16,7 +16,7 @@ namespace TechJobsConsole
             return AllJobs;
         }
 
-        /*
+        /* Blah
          * Returns a list of all values contained in a given column,
          * without duplicates. 
          */
