@@ -64,9 +64,10 @@ namespace TechJobsConsole
                     if (columnChoice.Equals("all"))
                     {
                         //This should be where you put findByValue
-
-
-                        Console.WriteLine("Search all fields not yet implemented.");
+                        searchResults = JobData.findByValue(searchTerm);
+                        PrintJobs(searchResults);
+                        
+                        //Console.WriteLine("Search all fields not yet implemented.");
                     }
                     else
                     {
