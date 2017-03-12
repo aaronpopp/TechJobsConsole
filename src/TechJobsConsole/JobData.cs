@@ -20,6 +20,11 @@ namespace TechJobsConsole
          * Returns a list of all values contained in a given column,
          * without duplicates. 
          */
+        //public static List<string> findByValue(string searchWord)
+        //{
+
+        //    return findings;
+        //}
         public static List<string> FindAll(string column)
         {
             LoadData();
