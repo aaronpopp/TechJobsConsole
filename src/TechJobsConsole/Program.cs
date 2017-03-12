@@ -65,7 +65,15 @@ namespace TechJobsConsole
                     {
                         //This should be where you put findByValue
                         searchResults = JobData.findByValue(searchTerm);
-                        PrintJobs(searchResults);
+
+                        if (searchResults.Count == 0)
+                        {
+                            Console.WriteLine("No results match your search term.");
+                        }
+                        else
+                        {
+                            PrintJobs(searchResults);
+                        }
                         
                         //Console.WriteLine("Search all fields not yet implemented.");
                     }

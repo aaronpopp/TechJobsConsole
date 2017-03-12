@@ -28,9 +28,20 @@ namespace TechJobsConsole
 
             foreach (Dictionary<string, string> job in AllJobs)
             {
-                foreach (KeyValuePair<string, string> item in job)
-                    if (item.Value.Contains(searchWord))
+                foreach (KeyValuePair<string, string> row in job)
+                {
+                    string searchLowercase = searchWord.ToLower();
+                    string thisKeyLowercase = row.Key.ToLower();
+                    string thisValueLowercase = row.Value.ToLower();
+
+                    if (thisKeyLowercase == searchLowercase || thisValueLowercase == searchLowercase)
+                    {
                         findings.Add(job);
+                        break;
+                    }
+                    //if (row.Value.Contains(searchWord))
+                    //    findings.Add(job);
+                }
             }
 
             return findings;
